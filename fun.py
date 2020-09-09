@@ -6,7 +6,3 @@ def fib(n):
         a,b = b, a+b
 
     return result
-
-l = fib(25)
-print(type(l))
-print(l)
