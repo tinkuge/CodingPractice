@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-
+////https://leetcode.com/discuss/interview-question/542850/postmates-senior-software-engg-sf-hq-mar-2020-reject
 public class TimeWindow {
     public static void main(String[] args) {
         int[] twin = {1,30};
@@ -52,15 +52,25 @@ public class TimeWindow {
     }
 
     static void altWindow(int[] twin, int[][] delv){
+        //Sort the array by the end time of each interval
         Arrays.sort(delv, (a, b) -> a[1] - b[1]);
-
+        //Assuming the intervals are non-negative
         int count = 0;
+        //Set pmax to negative
         int pmax = -1;
+        //Iterate through the delivery windows
         for(int i = 0; i < delv.length; i++){
+            //Current intervals' start time
             int curmin = delv[i][0];
+            //Current intervals' end time
             int curmax = delv[i][1];
+            //First check if the interval falls in the time window specified
+            //Ignore those that don't.
             if(curmin >= twin[0] && curmax <= twin[1]){
+                
+                /*
                 if(pmax > -1){
+                    //
                     if(curmin >= pmax){
                         count++;
                         pmax = curmax;
@@ -69,6 +79,14 @@ public class TimeWindow {
 
                 else{
                     count++;
+                    pmax = curmax;
+                }
+                */
+                //If current min is gte last interval's end
+                if(curmin >= pmax){
+                    //increment count
+                    count++;
+                    //set pmax to current end time
                     pmax = curmax;
                 }
             }
