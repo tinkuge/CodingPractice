@@ -1,5 +1,5 @@
 //https://medium.com/@schwiftmaster/intuition-for-kadanes-algorithm-maximum-sub-array-sum-f42bec0251d2
-
+//https://leetcode.com/problems/maximum-subarray/
 public class MaxSub {
     public static void main(String[] args) {
         int[] nums = new int[]{-2, -1, -3, -4, -1, -2, -1, -5, 0};
