@@ -173,7 +173,7 @@ public class SumRange {
         //Populate the cumsum array
         for(int i = 1; i < nums.length; i++){
             //cumsum[i] = cumsum[i-1]+nums[i]
-            cumsum[i] = addMod(nums[i], cumsum[i-1], mod);
+            cumsum[i] = addMod(nums[i], cumsum[i-1], harcod);
         }
         
         //maintains overall sum from all the queries
