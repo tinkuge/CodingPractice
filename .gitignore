@@ -1,3 +1,5 @@
 
 Coding-Practice/
 __pycache__/
+*.class
+launch.json
