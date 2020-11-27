@@ -1,4 +1,4 @@
-public class rotateImage {
+public class RotateImage {
     public void rotate(int[][] matrix) {
         //   [ 5, 1, 9,11],
         //   [ 2, 4, 8,10],
@@ -49,7 +49,7 @@ public class rotateImage {
     }
 
     public static void main(String[] args) {
-        rotateImage ri = new rotateImage();
+        RotateImage ri = new RotateImage();
 
         int[][] matrix = new int[][]{{ 5, 1, 9,11}, {2, 4, 8,10}, {13, 3, 6, 7}, {15,14,12,16}};
 
